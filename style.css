@@ -1,0 +1,523 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+*, *:before, *:after{
+  box-sizing: border-box;
+  font-family: 'Noto Sans TC', sans-serif;
+  text-align: center;
+}
+
+.platform,.character,.service,.feedback{
+    margin-top: 100px;
+}
+/*---------行銷前言---------*/
+
+h2,h3,h4{
+  line-height: 1.45;
+}
+
+p{
+    line-height: 1.5;
+}
+
+.wrap{
+    height: 100vh;
+    background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home.svg');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: right top;
+    position: relative;
+
+}
+
+@media (max-width:576px) {
+    .wrap{
+        background-image:none;
+        height: auto;
+        margin-bottom: 24px; 
+    }
+
+}
+
+.container{
+    max-width: 1366px;
+    margin:0 auto;
+
+}
+
+/*表頭*/
+.header,.advertising,.platform_item, .character_item,.service>.container,.feedback_item{            /*display flex*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.header{
+    padding: 24px 0;
+}
+
+.header h1{
+    width: 218px;
+    height: 40px;
+    background-image: url('https://github.com/hexschool/webLayoutTraining1st/blob/master/chatTalker_images/logo.png?raw=true');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header>a{
+    background-color: #FF5D50;
+    border-radius: 22px;
+    color:white;
+    text-decoration: none;
+    padding: 8px 22px;
+}
+
+
+/*廣告*/
+.advertising{
+    margin-bottom: 30px;
+}
+
+
+.advertising *{
+    text-align: left;
+}
+.advertising h4{
+    font-size: 18px;
+    color: #56C4C5;
+    
+}
+
+.advertising h2{
+    font-size: 48px;
+    padding: 8px 0px 16px 0px ;
+    font-weight: bold;
+
+}
+
+.dvertising h3{
+    font-size: 20px;
+}
+
+.advertising img{
+    width: 532px;
+}
+
+@media (max-width:576px) {
+
+    .header,.advertising,.platform_item, .character_item,.service>.container,.feedback_item{            /*display flex*/
+        justify-content: space-evenly;
+
+    }
+
+    .advertising h4{
+        font-size: 16px;
+        
+    }
+    
+    .advertising h2{
+        font-size: 32px;
+    
+    }
+    
+    .dvertising h3{
+        font-size: 16px;
+    }
+    .advertising img{
+        width: 90%;
+        padding: 32px;
+    }
+
+}
+
+.mobile{
+    display: none;
+}
+
+
+.bgCircle{
+    width: 276px;
+    position: absolute;
+    top:calc(100% - 138px);
+    left:-138px;
+    z-index: -1;
+}
+
+@media (max-width:576px) {
+    
+    .mobile{
+       display: inline-block;
+
+        background-image:url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home_sm.svg');
+        background-repeat: no-repeat;
+        background-size: 85%;
+        background-position: center;
+
+
+    }   
+
+    .computer{
+        display: none;
+    }
+
+    .bgCircle{
+        display: none;
+    }
+}
+
+
+/*---------平台 + 角色---------*/
+
+
+.platform_item,.character_item{
+    align-items: start;
+}
+.platform h2,.character h2{
+    font-size:32px ;
+    font-weight: bold;
+
+}
+
+.bgCircle_Mobile{
+    display: none;
+}
+@media (max-width:576px) {
+
+    .platform{
+        position: relative;
+    }
+    
+    .bgCircle_Mobile{
+        width: 20%;
+        position: absolute;
+        top:0px;
+        left:-40px;
+        
+    }
+    
+
+}
+
+.platform_item{
+    padding: 48px 0px;
+}
+
+.platform_item img{
+   width: 90px;
+}
+
+.platform_item li>h3{
+    font-size:24px ;
+    font-weight: bold;
+    padding: 24px 0px;
+
+}
+
+.platform_item p{
+    font-size:16px ;
+
+}
+
+
+.character h3{
+    padding-top:16px;
+    font-size:20px ;
+    font-weight: bold;
+
+}
+
+
+.character_item li{
+    width: 23%;
+    border-radius: 12px;
+    box-shadow: 0px 3px 10px #00000014;
+    margin: 48px 0px;
+
+}
+.character_item li>img{
+    border-radius: 12px 12px 0 0;
+    width: 100%;
+
+}
+
+.character_item h4{
+    color: #56C4C5;
+    font-size: 16px;
+    padding: 16px;
+    font-weight: bold;
+}
+
+.character_item p{
+    font-size: 16px;
+
+}
+
+@media (max-width:576px) {
+
+    .platform_item li,.character_item li{
+        width:90%;
+    }
+
+
+}
+
+
+/*---------服務了解客戶輪廓---------*/
+
+
+.service_item{
+    width: 45%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service_item li{
+    width: 35%;
+    margin-bottom: 18px;
+    padding-left: 32px;
+    padding-top: 32px;
+    padding-bottom: 48px;
+    border-radius: 12px;
+    box-shadow: 0px 3px 10px #00000014;
+}
+
+.circle{
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    box-shadow: 0px 3px 10px #00000014;
+    padding: 17px;
+}
+
+.service *{
+
+    text-align: left;
+
+}
+.service_item img{
+    width: 52px;
+    
+}
+
+
+.service_item h3 {
+    font-size: 18px;
+    padding: 24px 0px;
+    font-weight: bold;
+}
+
+.service_item p {
+    font-size: 16px;
+    padding: 16px 0px;
+}
+
+.customer{
+    width: 45%;
+}
+.customer h2{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.customer p{
+    padding: 16px 0px;
+    font-size: 18px;
+}
+
+.customer>a{
+    display: inline-block;
+    background-color: #56C4C5;
+    border-radius: 27px;
+    color:white;
+    text-decoration: none;
+    margin: 8px 0px;
+    padding: 12px 32px;
+}
+
+
+
+@media (max-width:576px) {
+
+    .service>.container{
+        flex-direction: column-reverse;
+        align-items: center;
+
+    }
+    .customer{
+        width: 80%;
+    }
+    .service_item>li{
+        width: 100%;
+    }
+
+    .customer, .customer h2,.customer p{
+        text-align: center;
+    }
+
+    .customer h2{
+        font-size: 28px;
+    }
+
+}
+
+
+
+
+
+
+.feedback h2{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.feedback_item{
+    margin: 104px 0px;
+}
+.feedback_item>li{
+    width:30%;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 2px 3px 10px #00000014;
+    font-size: 16px;
+    padding: 24px 32px;
+
+}
+
+.feedback_item *{
+    text-align: left;
+}
+
+.feedback_item>li>p{
+    padding: 24px 0px;
+    border-bottom: 1px solid #E5E4E2;
+}
+
+.feedback_item>li>h4{
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 24px;
+}
+
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    padding-top: 8px;
+}
+
+.title img{
+    width: 17px;
+}
+
+
+
+.user{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top:-30%;
+    left:32px;
+
+}
+
+.footer{
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/home_footer.svg");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.footer h2{
+    padding-top: 260px;
+    font-size:32px;
+    font-weight: bold;
+}
+
+.footer a{
+    padding-top: 48px;
+    padding-bottom:100px;
+    font-size:32px;
+    display: inline-block;
+    background-color: #56C4C5;
+    border-radius: 27px;
+    color:white;
+    text-decoration: none;
+    padding: 12px 32px;
+}
+
+.footer a{
+    display: inline-block;
+    margin-top: 48px;
+    margin-bottom:100px;
+    font-size:18px;
+    background-color: #56C4C5;
+    border-radius: 27px;
+    color:white;
+    text-decoration: none;
+    padding: 12px 32px;
+}
+
+.footer p{
+    font-size:16px;
+}
+
+@media (max-width:576px) {
+   .feedback_item>li{
+     width: 100%;
+     margin-bottom: 100px;
+   }   
+}
+
+
